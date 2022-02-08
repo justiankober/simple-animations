@@ -128,3 +128,24 @@ from {
     font-size: 8rem;
   }
 }
+  .rotating-box {
+    width: 3rem;
+    height: 2rem;
+    background-color: rebeccapurple;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    animation-name: rotate;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
