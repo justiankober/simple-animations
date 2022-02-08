@@ -140,6 +140,7 @@ from {
   animation-iteration-count: infinite;
   display: block;
   position: absolute;
+  top: 80%;
 }
 
 @keyframes rotate {
@@ -161,5 +162,67 @@ from {
   100% {
     transform: rotate(360deg);
     left: 100%;
+  }
+}
+/* More Advanced Cylon Eye Example */
+.polling_message {
+  color: white;
+  position: absolute;
+  left: 50%;
+  margin-right: 2%;
+  -webkit-animation: 4s linear 0s infinite alternate move_polling_message;
+  animation: 4s linear 0s infinite alternate move_polling_message;
+}
+@-webkit-keyframes move_polling_message {
+  from {
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+@keyframes move_polling_message {
+  from {
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+.view_port {
+  background-color: black;
+  height: 25px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cylon_eye {
+  background-color: red;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9) 25%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.9) 75%
+  );
+  color: white;
+  height: 100%;
+  width: 20%;
+
+  -webkit-animation: 4s linear 0s infinite alternate move_eye;
+  animation: 4s linear 0s infinite alternate move_eye;
+}
+
+@-webkit-keyframes move_eye {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+@keyframes move_eye {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
   }
 }
