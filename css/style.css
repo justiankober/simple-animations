@@ -47,7 +47,7 @@ from {
   height: 2rem;
   background-color: pink;
   animation-name: change;
-  animation-duration: 2.5s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-delay: 5s;
   display: block;
@@ -74,24 +74,24 @@ from {
 .dci {
   font-size: 3rem;
   animation-name: letter-moving;
-  animation-duration: 3s;
+  animation-duration: 8s;
 }
 .dci :nth-child(1) {
   color: lightblue;
   animation-name: letter-D;
-  animation-duration: 1s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
 }
 .dci :nth-child(2) {
   color: blue;
   animation-name: letter-C;
-  animation-duration: 0.5s;
+  animation-duration: 8;
   animation-iteration-count: infinite;
 }
 .dci :nth-child(3) {
   color: cornflowerblue;
   animation-name: letter-I;
-  animation-duration: 1s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
   /* animation: ; */
 }
@@ -128,24 +128,38 @@ from {
     font-size: 8rem;
   }
 }
-  .rotating-box {
-    width: 3rem;
-    height: 2rem;
-    background-color: rebeccapurple;
-    border-radius: 10px;
-    width: 100px;
-    height: 100px;
-    animation-name: rotate;
-    animation-duration: 0.7s;
-    animation-iteration-count: infinite;
-  }
+.rotating-box {
+  width: 3rem;
+  height: 2rem;
+  background-color: rebeccapurple;
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  animation-name: rotate;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  display: block;
+  position: absolute;
+}
 
-  @keyframes rotate {
-    0% {
-      transform: rotate(0);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+    left: 25%;
+  }
+  50% {
+    transform: rotate(180deg);
+    left: 50%;
+  }
+  75% {
+    transform: rotate(270deg);
+    left: 75%;
+  }
+  100% {
+    transform: rotate(360deg);
+    left: 100%;
   }
 }
